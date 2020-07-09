@@ -9,7 +9,16 @@
 
 # GitHubとZenHubの設定
 
+<<<<<<< HEAD
 - まずは[こちら](https://github.com/kenta-polyglot/zsksample_rails01/wiki/GitHub%E3%81%A8ZenHub%E3%81%AE%E8%A8%AD%E5%AE%9A)のwikiに記載されている手順に従って、GitHub/ZenHub/Herokuの設定、およびチームメンバーの方たちのGitHubへの招待等を完了させておいてください。
+=======
+- まずはこちらのリポジトリをチームの代表者の方のリポジトリにforkしてください。
+- そのリポジトリにチームメンバーの方たちを招待してください。
+- (後で追記していく)
+  - developブランチをデフォルトブランチに設定してください。
+  - masterブランチはherokuへのデプロイ用に使用します。
+  - master、develop、その他のブランチそれぞれにブランチ保護の設定をおこなってください。
+>>>>>>> docs: Modify README (#13)
 
 # 環境構築手順
 
