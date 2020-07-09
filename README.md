@@ -7,6 +7,7 @@
 - Macでの開発を前提としています。
 - Bashがデフォルトのシェルであることを前提としています。(zshを使用している方は適宜読み替えてください)
 
+<<<<<<< HEAD
 # GitHubとZenHubの設定
 
 - まずは[こちら](https://github.com/kenta-polyglot/zsksample_rails01/wiki/GitHub%E3%81%A8ZenHub%E3%81%AE%E8%A8%AD%E5%AE%9A)のwikiに記載されている手順に従って、GitHub/ZenHub/Herokuの設定、およびチームメンバーの方たちのGitHubへの招待等を完了させておいてください。
@@ -24,6 +25,25 @@
 
 ## gemのインストール
 
+=======
+# 手順
+
+- まずはこちらのリポジトリをチームの代表者の方のリポジトリにforkしてください。
+- そのリポジトリにチームメンバーの方たちを招待してください。
+- (後で追記していく)
+
+# 環境構築手順
+
+## rbenvとRubyのインストール
+
+- 下記のページの情報等を参考にして、rbenvとRubyのインストールを行ってください。
+- インストールするRubyのバージョンは、.ruby-versionに記載されているバージョンに合わせてください。
+
+  [【完全版】MacでRails環境構築する手順の全て](https://qiita.com/kodai_0122/items/56168eaec28eb7b1b93b)
+
+## gemのインストール
+
+>>>>>>> f284ae5... docs: Modify README (#11)
 ```
 # bundle install時のパスを固定
 bundle config set path 'vendor/bundle'
@@ -56,7 +76,11 @@ brew install hadolint
 script/dockerlint
 ```
 
+<<<<<<< HEAD
 ## アプリケーションの実行
+=======
+# アプリケーションの実行
+>>>>>>> f284ae5... docs: Modify README (#11)
 
 ```
 docker-compose up -d
@@ -67,11 +91,16 @@ rails s
 http://localhost:3000/users
 ```
 
+<<<<<<< HEAD
 ## アプリケーションのテスト
+=======
+# アプリケーションのテスト
+>>>>>>> f284ae5... docs: Modify README (#11)
 
 ```
 docker-compose up -d
 bundle exec rake db:setup
+<<<<<<< HEAD
 bundle exec rspec
 ```
 
@@ -144,3 +173,7 @@ bundle exec rspec
 - このプルリクをマージすると、GitHub ActionsのDeployワークフロー(`.github/workflows/deploy.yml`で定義されています)が実行され、[こちら](https://github.com/kenta-polyglot/zsksample_rails01/wiki/GitHub%E3%81%A8ZenHub%E3%81%AE%E8%A8%AD%E5%AE%9A)のwikiの作業で事前に設定されているGitHub Secretsの情報を使用して、Herokuへのデプロイが実行されます。
 - デプロイ完了後は、https://アプリケーション名.herokuapp.com/users でアプリケーションが参照できるようになります。
 - デプロイが成功したら、[こちら](https://docs.github.com/ja/enterprise/2.15/user/articles/creating-releases)のドキュメントを参考にして、masterブランチの最新コミットに対してリリースとタグを設定しておきましょう。(最初のバージョンのリリース名とタグ名は「v0.0.1」でよいでしょう。以降「v0.0.2」や「v0.0.3」のように、新しいコミットをdevelopブランチからマージしてデプロイした際は新しいタグを追加していってください)
+=======
+bundle exec rake test
+```
+>>>>>>> f284ae5... docs: Modify README (#11)
