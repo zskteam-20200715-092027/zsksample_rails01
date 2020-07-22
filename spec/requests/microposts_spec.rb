@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe '/microposts', type: :request do
-  let!(:micropost) { create(:micropost) }
+  let!(:user) { create(:user) }
+  let!(:micropost) { create(:micropost, user: user) }
 
   describe 'GET /index' do
     it 'renders a successful response' do

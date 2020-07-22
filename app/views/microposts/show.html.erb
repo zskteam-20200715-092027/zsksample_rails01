@@ -10,5 +10,11 @@
   <%= @micropost.user_id %>
 </p>
 
+<% if @micropost.image.attached? %>
+  <%= image_tag @micropost.image %>
+<% else %>
+  画像なし
+<% end %>
+
 <%= link_to 'Edit', edit_micropost_path(@micropost) %> |
 <%= link_to 'Back', microposts_path %>

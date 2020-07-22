@@ -4,7 +4,7 @@ class MicropostsController < ApplicationController
   # GET /microposts
   # GET /microposts.json
   def index
-    @microposts = Micropost.all
+    @microposts = Micropost.all.page(params[:page]).per(5)
   end
 
   # GET /microposts/1
@@ -23,6 +23,8 @@ class MicropostsController < ApplicationController
   # POST /microposts.json
   def create
     @micropost = Micropost.new(micropost_params)
+    # @micropost.image.attach(params.require(:image))
+    # Current.user.avatar.attach(params.require(:avatar))
 
     respond_to do |format|
       if @micropost.save
@@ -68,6 +70,6 @@ class MicropostsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def micropost_params
-    params.require(:micropost).permit(:content, :user_id)
+    params.require(:micropost).permit(:content, :user_id, :image)
   end
 end

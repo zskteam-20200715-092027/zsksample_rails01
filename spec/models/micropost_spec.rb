@@ -30,7 +30,7 @@ RSpec.describe Micropost, type: :model do
 
   it 'can`t make a micropost with a non-existent user_id.' do
     micropost = Micropost.new(
-      user_id: 3,
+      user_id: 10_000,
       content: 'test content'
     )
     micropost.valid?
