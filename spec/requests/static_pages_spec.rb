@@ -5,7 +5,7 @@ RSpec.describe 'StaticPages', type: :request do
     it 'should get root' do
       get '/'
       expect(response).to have_http_status(200)
-      expect(response.body).to include 'hello, world!'
+      expect(response.body).to include 'Implemented list'
     end
   end
 end
